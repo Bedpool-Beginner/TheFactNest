@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FactNest - Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f0f0f;
+      --text: #fff;
+      --card-bg: rgba(255, 255, 255, 0.06);
+      --accent: #00ffc3;
+      --muted: #ccc;
+      --glass: rgba(255, 255, 255, 0.05);
+      --shadow: rgba(0,0,0,0.3);
+    }
+
+    body.dark {
+      --bg: #f4f4f4;
+      --text: #000;
+      --card-bg: rgba(0, 0, 0, 0.06);
+      --accent: #00c29e;
+      --muted: #333;
+      --glass: rgba(0, 0, 0, 0.05);
+      --shadow: rgba(0,0,0,0.1);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Outfit', sans-serif;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      overflow-x: hidden;
+      transition: background 0.4s, color 0.4s;
+    }
+
+    header {
+      padding: 2rem;
+      text-align: center;
+      background: var(--glass);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 0 15px var(--shadow);
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      position: relative;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      color: var(--accent);
+      text-shadow: 0 0 10px #00ffc3aa;
+    }
+
+    header p {
+      margin-top: 1rem;
+      font-size: 1.25rem;
+      color: var(--muted);
+    }
+
+    .toggle-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      padding: 10px 16px;
+      border-radius: 20px;
+      background: var(--glass);
+      color: var(--text);
+      border: 1px solid rgba(255,255,255,0.15);
+      backdrop-filter: blur(14px);
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .toggle-btn:hover {
+      transform: scale(1.05);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+      padding: 3rem;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: 16px;
+      padding: 1.5rem;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 10px 30px var(--shadow);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+    }
+
+    .card h2 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: var(--text);
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .card a {
+      display: inline-block;
+      margin-top: 1rem;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    footer {
+      padding: 2rem;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>FactNest</h1>
+    <p>The hub for deep-dive research on today's top entrepreneurs and billionaires.</p>
+    <button class="toggle-btn" onclick="toggleMode()">Toggle Theme</button>
+  </header>
+
+  <section class="grid">
+    <div class="card" onclick="location.href='iman-gadzhi.html'">
+      <h2>Iman Gadzhi</h2>
+      <p>From school dropout to digital marketing empire — explore the journey of Iman Gadzhi.</p>
+      <a href="FactNest.html">Read Profile →</a>
+    </div>
+
+    <div class="card" onclick="location.href='alex-hormozi.html'">
+      <h2>Alex Hormozi</h2>
+      <p>$100M Offers and business scaling wisdom — dive into Alex Hormozi’s empire-building strategies.</p>
+      <a href="alex-hormozi.html">Read Profile →</a>
+    </div>
+
+    <div class="card" onclick="location.href='elon-musk.html'">
+      <h2>Elon Musk</h2>
+      <p>Tesla, SpaceX, Neuralink — decode the mindset of the world’s most ambitious entrepreneur.</p>
+      <a href="elon-musk.html">Read Profile →</a>
+    </div>
+
+    <div class="card" onclick="location.href='mrbeast.html'">
+      <h2>MrBeast</h2>
+      <p>YouTube's biggest philanthropist — the genius behind viral content and impact.</p>
+      <a href="mrbeast.html">Read Profile →</a>
+    </div>
+
+    <div class="card" onclick="location.href='andrew-tate.html'">
+      <h2>Andrew Tate</h2>
+      <p>A controversial figure with a powerful personal brand — discover the facts and flair.</p>
+      <a href="andrew-tate.html">Read Profile →</a>
+    </div>
+  </section>
+
+  <footer>
+    Built with 💡 by FactNest. All profiles are researched and curated for educational purposes.
+  </footer>
+
+  <script>
+    function toggleMode() {
+      document.body.classList.toggle('dark');
+    }
+  </script>
+</body>
+</html>
